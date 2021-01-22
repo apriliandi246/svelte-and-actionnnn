@@ -15,7 +15,7 @@
    }
 </script>
 
-<div>
+<div use:removeEl>
    <h1>What is Lorem Ipsum?</h1>
 
    <p>
