@@ -1,19 +1,21 @@
 function clipboardValue(element, value) {
    let time;
-   let prevText = element.textContent;
+   let textEl = element.textContent;
 
    element.addEventListener("click", async () => {
-      await navigator.clipboard.writeText(value);
+      await navigator.clipboard.writeText(value === undefined ? textEl : value);
       element.textContent = "Copied";
-      time = setTimeout(() => (element.textContent = prevText), 900);
+      time = setTimeout(() => (element.textContent = textEl), 700);
    });
 
    return {
       destroy() {
          element.removeEventListener("click", async () => {
-            await navigator.clipboard.writeText(value);
+            await navigator.clipboard.writeText(
+               value === undefined ? textEl : value
+            );
             element.textContent = "Copied";
-            time = setTimeout(() => (element.textContent = prevText), 900);
+            time = setTimeout(() => (element.textContent = textEl), 700);
          });
 
          clearTimeout(time);
