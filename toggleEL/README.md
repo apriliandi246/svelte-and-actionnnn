@@ -6,7 +6,7 @@
 <script>
    let isHide = false;
 
-   function hideOrShow(element) {
+   function toggleEL(element) {
       return {
          update(newProps) {
             newProps

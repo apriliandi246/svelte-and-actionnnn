@@ -1,4 +1,4 @@
-function hideOrShow(element) {
+function toggleEL(element) {
    return {
       update(newProps) {
          if (newProps) {
