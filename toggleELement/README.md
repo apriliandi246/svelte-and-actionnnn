@@ -6,7 +6,7 @@
 <script>
    let isHide = false;
 
-   function toggleEL(element) {
+   function toggleELement(element) {
       return {
          update(newProps) {
             newProps
@@ -17,7 +17,7 @@
    }
 </script>
 
-<h1 use:hideOrShow>Hello World</h1>
+<h1 use:toggleELement>Hello World</h1>
 
 <button>{isHide}</button>
 ```

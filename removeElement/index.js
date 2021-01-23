@@ -1,4 +1,4 @@
-function removeEl(element) {
+function removeElement(element) {
    element.addEventListener("click", () => element.remove());
 
    return {

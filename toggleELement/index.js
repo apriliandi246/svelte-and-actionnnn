@@ -1,4 +1,4 @@
-function toggleEL(element) {
+function toggleELement(element) {
    return {
       update(newProps) {
          if (newProps) {

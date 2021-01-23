@@ -4,7 +4,7 @@
 
 ```html
 <script>
-   function removeEl(element) {
+   function removeElement(element) {
       element.addEventListener("click", () => element.remove());
 
       return {
@@ -15,7 +15,7 @@
    }
 </script>
 
-<div use:removeEl>
+<div use:removeElement>
    <h1>What is Lorem Ipsum?</h1>
 
    <p>
