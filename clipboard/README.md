@@ -2,6 +2,8 @@
 
 <br>
 
+### ❗ If you don't pass a parameter value, _use:clipboard_ will take your textContent as a value....
+
 ```html
 <script>
    const link = "https://svelte.dev/";
@@ -37,7 +39,3 @@
 
 <button use:clipboard="{link}">{link}</button>
 ```
-
-<br>
-
-### If you don't pass a parameter value, _use:clipboard_ will take your textContent as a value....
