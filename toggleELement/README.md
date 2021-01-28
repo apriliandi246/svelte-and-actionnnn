@@ -8,16 +8,18 @@
 
    function toggleELement(element) {
       return {
-         update(newProps) {
-            newProps
-               ? (element.style.display = "none")
-               : (element.style.display = "");
+         update(props) {
+            if (props === true) {
+               element.style.display = "none";
+            } else {
+               element.style.display = "";
+            }
          },
       };
    }
 </script>
 
-<h1 use:toggleELement>Hello World</h1>
+<h1 use:toggleELement="{isHide}">Hello World</h1>
 
 <button>{isHide}</button>
 ```

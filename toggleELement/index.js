@@ -1,7 +1,7 @@
 function toggleELement(element) {
    return {
-      update(newProps) {
-         if (newProps) {
+      update(props) {
+         if (props === true) {
             element.style.display = "none";
          } else {
             element.style.display = "";
