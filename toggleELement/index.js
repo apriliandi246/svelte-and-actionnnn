@@ -3,9 +3,8 @@ function toggleELement(element) {
    return {
       update(props) {
          if (props === true) {
-            element.style.display = "none";
-         } else {
-            element.style.display = "";
+            if (props === true) element.style.display = "none";
+            if (props === false) element.style.display = "";
          }
       },
    };
