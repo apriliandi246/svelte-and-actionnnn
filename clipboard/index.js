@@ -1,3 +1,4 @@
+// option 1
 function clipboardValue(element, value) {
    let time;
    let textEl = element.textContent;
@@ -19,6 +20,40 @@ function clipboardValue(element, value) {
          });
 
          clearTimeout(time);
+      },
+   };
+}
+
+// option 2
+function clipboardValue(element, value) {
+   let time;
+   let textEl = element.textContent;
+
+   element.addEventListener("click", () => {
+      const el = document.createElement("textarea");
+      el.value = value;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand("copy");
+      document.body.removeChild(el);
+      element.textContent = "Copied";
+      time = setTimeout(() => (element.textContent = textEl), 700);
+   });
+
+   return {
+      destroy() {
+         element.removeEventListener("click", () => {
+            const el = document.createElement("textarea");
+            el.value = value;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand("copy");
+            document.body.removeChild(el);
+            element.textContent = "Copied";
+            time = setTimeout(() => (element.textContent = textEl), 700);
+         });
+
+         clearInterval(time);
       },
    };
 }
