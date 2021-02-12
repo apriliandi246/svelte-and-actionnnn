@@ -1,5 +1,5 @@
 // option 1
-function clipboardValue(element, value) {
+function clipboard(element, value) {
    let time;
    let textEl = element.textContent;
 
@@ -25,7 +25,7 @@ function clipboardValue(element, value) {
 }
 
 // option 2
-function clipboardValue(element, value) {
+function clipboard(element, value) {
    let time;
    let textEl = element.textContent;
 

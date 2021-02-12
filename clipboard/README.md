@@ -8,7 +8,7 @@
 <script>
    const link = "https://svelte.dev/";
 
-   function clipboardValue(element, value) {
+   function clipboard(element, value) {
       let time;
       let textEl = element.textContent;
 
@@ -44,7 +44,7 @@
 <script>
    const link = "https://svelte.dev/";
 
-   function clipboardValue(element, value) {
+   function clipboard(element, value) {
       let time;
       let textEl = element.textContent;
 
