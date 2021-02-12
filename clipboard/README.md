@@ -40,6 +40,8 @@
 <button use:clipboard="{link}">{link}</button>
 ```
 
+<br>
+
 ```html
 <script>
    const link = "https://svelte.dev/";

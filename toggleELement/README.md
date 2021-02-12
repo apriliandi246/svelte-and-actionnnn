@@ -1,4 +1,4 @@
-## Toggle your element (hide or show it) 😎
+## Toggle your element (hide or show) 👁️
 
 <br>
 
