@@ -2,31 +2,31 @@
 
 <br>
 
-### ❗ Just customize if you neet more....
+### ❗ Just customize if you need more....
 
 ```html
 <script>
-   let email = "";
-   let username = "";
-   let password = "";
+	let email = "";
+	let username = "";
+	let password = "";
 
-   const patterns = {
-      password: /^[\w@-]{6,}$/,
-      username: /^[\S*]{5,12}$/i,
-      email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
-   };
+	const patterns = {
+		password: /^[\w@-]{6,}$/,
+		username: /^[\S*]{5,12}$/i,
+		email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
+	};
 
-   function validateInput(element) {
-      return {
-         update(props) {
-            if (props.pattern.test(props.value) === true) {
-               element.style.border = "2px solid blue";
-            } else {
-               element.style.border = "2px solid red";
-            }
-         },
-      };
-   }
+	function validateInput(element) {
+		return {
+			update(props) {
+				if (props.pattern.test(props.value) === true) {
+					element.style.border = "2px solid blue";
+				} else {
+					element.style.border = "2px solid red";
+				}
+			},
+		};
+	}
 </script>
 
 <label for="username">Username</label>
