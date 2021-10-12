@@ -23,5 +23,19 @@ Demo : [Link](https://svelte.dev/repl/37f426fe4b844598afbea850af05fc0b?version=3
 	}
 </script>
 
-<h1 use:statusNetwork>online 🔥</h1>
+<textarea use:relativeTextarea></textarea>
+
+<style>
+	textarea {
+		width: 300px;
+		height: 40px;
+		border: none;
+		resize: none;
+		border-bottom: 2px solid #000;
+	}
+
+	textarea:focus {
+		border: none;
+	}
+</style>
 ```
